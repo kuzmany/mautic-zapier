@@ -1,3 +1,7 @@
+## 3.0.0
+
+* OAuth2 authentication support 
+
 ## 2.1.6
 
 * Minimal Node version bumped from 8 to 10.
