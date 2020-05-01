@@ -1,9 +1,9 @@
 {
-  "name": "mautic-zapier",
+  "name": "automation-zapier",
   "version": "2.1.7",
-  "description": "An app to integrate a Mautic instance with Zapier",
-  "repository": "mautic/mautic-zapier",
-  "homepage": "https://github.com/mautic/mautic-zapier",
+  "description": "An app to integrate a Webmecanik Automation instance with Zapier",
+  "repository": "webmecanik/automation-zapier",
+  "homepage": "https://github.com/webmecanik/automation-zapier",
   "author": "Mautic Community <integrations@mautic.com>",
   "license": "BSD-3-Clause",
   "main": "index.js",
