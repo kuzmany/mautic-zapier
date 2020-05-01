@@ -70,7 +70,7 @@ const testAuth = (z , bundle ) => {
   return promise.then(response => {
 
     if (typeof response.json === 'undefined') {
-      throw new Error('The URL you provided ('+bundle.inputData.baseUrl+') is not the base URL of a Mautic instance');
+      throw new Error('The URL you provided ('+bundle.inputData.baseUrl+') is not the base URL of a Webmecanik Automation instance');
     }
 
     return response;
@@ -81,12 +81,12 @@ const testAuth = (z , bundle ) => {
 module.exports = {
   type: 'oauth2',
   fields: [
-    {key: 'clientId', type: 'string', required: true, helpText: 'Your Client ID (Public Key) is available in Mautic > Settings > API Credentials > OAuth 2'},
-    {key: 'clientSecret', type: 'string', required: true, helpText: 'Your Client Secret (Secret Key) is available in Mautic > Settings > API Credentials > OAuth 2'},
-    {key: 'baseUrl', type: 'string', required: true, helpText: 'The root URL of your Mautic installation starting with https://. E.g. https://my.mautic.net.'}
+    {key: 'clientId', type: 'string', required: true, helpText: 'Your Client ID (Public Key) is available in Webmecanik Automation > Settings > API Credentials > OAuth 2 ([docs](https://support.webmecanik.com/hc/en-us/articles/115004193669-How-to-connect-Zapier-to-my-Automation-account-))'},
+    {key: 'clientSecret', type: 'string', required: true, helpText: 'Your Client Secret (Secret Key) is available in Webmecanik Automation > Settings > API Credentials > OAuth 2 ([docs](https://support.webmecanik.com/hc/en-us/articles/115004193669-How-to-connect-Zapier-to-my-Automation-account-))'},
+    {key: 'baseUrl', type: 'string', required: true, helpText: 'The root URL of your Webmecanik Automation installation starting with https://. E.g. https://my.automation.webmecanik.com'}
   ],
   oauth2Config: {
-    // Step 1 of the OAuth flow; specify where to send the user to authenticate with Mautic API.
+    // Step 1 of the OAuth flow; specify where to send the user to authenticate with Webmecanik Automation API.
     // Zapier generates the state and redirect_uri, you are responsible for providing the rest.
     authorizeUrl: {
       url: '{{bundle.inputData.baseUrl}}/oauth/v2/authorize',
@@ -107,6 +107,6 @@ module.exports = {
   },
   // The test method allows Zapier to verify that the access token is valid
   test: testAuth,
-  // assuming "baseUrl of Mautic"
+  // assuming "baseUrl of Webmecanik Automation"
   connectionLabel: '{{baseUrl}}',
 };
