@@ -1,6 +1,6 @@
 {
   "name": "automation-zapier",
-  "version": "2.1.7",
+  "version": "1.0.0",
   "description": "An app to integrate a Webmecanik Automation instance with Zapier",
   "repository": "webmecanik/automation-zapier",
   "homepage": "https://github.com/webmecanik/automation-zapier",
